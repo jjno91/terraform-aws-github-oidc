@@ -15,3 +15,4 @@ init:
 
 import: init
 	terraform import aws_iam_openid_connect_provider.this arn:aws:iam::$(account):oidc-provider/token.actions.githubusercontent.com || true
+	terraform import aws_iam_role.this github || true
