@@ -6,7 +6,7 @@ apply: init import
 plan: init
 	terraform plan
 
-check:
+test:
 	terraform validate
 	terraform fmt -check -recursive
 
