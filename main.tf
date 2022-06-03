@@ -20,13 +20,13 @@ data "aws_iam_policy_document" "this" {
     }
 
     condition {
-      test     = "StringEquals"
+      test     = "ForAllValues:StringEquals"
       values   = ["sts.amazonaws.com"]
       variable = "token.actions.githubusercontent.com:aud"
     }
 
     condition {
-      test     = "StringEquals"
+      test     = "ForAllValues:StringEquals"
       values   = [var.owner]
       variable = "token.actions.githubusercontent.com:repository_owner"
     }
