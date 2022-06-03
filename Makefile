@@ -1,4 +1,4 @@
-account := `aws sts get-caller-identity --query "Account" --output text`
+account = `aws sts get-caller-identity --query "Account" --output text`
 
 apply: init import
 	terraform apply
