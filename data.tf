@@ -8,15 +8,9 @@ data "aws_iam_policy_document" "this" {
     }
 
     condition {
-      test     = "StringEquals"
-      values   = ["sts.amazonaws.com"]
-      variable = "token.actions.githubusercontent.com:aud"
-    }
-
-    condition {
-      test     = "StringEquals"
-      values   = [var.owner]
-      variable = "token.actions.githubusercontent.com:repository_owner"
+      test     = "StringLike"
+      values   = ["repo:${var.repo}"]
+      variable = "token.actions.githubusercontent.com:sub"
     }
   }
 }

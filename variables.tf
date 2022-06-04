@@ -1,6 +1,6 @@
-variable "owner" {
+variable "repo" {
   description = "https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token"
-  default     = "jjno91"
+  default     = "jjno91/*"
   type        = string
 }
 
